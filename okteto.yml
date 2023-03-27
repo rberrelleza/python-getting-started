@@ -1,0 +1,20 @@
+build:
+  hello-world:
+    context: .
+
+deploy:
+  - kubectl apply -f k8s.yml
+
+dev:
+  hello-world:
+    command: bash
+    sync:
+    - .:/usr/src/app
+    forward:
+    - 8080:8080
+
+dependencies:
+  launchdarkly:
+    repository: https://github.com/okteto/launchdarkly
+    branch: rb/add-image
+    wait: true
