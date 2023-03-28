@@ -6,7 +6,11 @@ build:
 
 deploy:
   - name: Deploy application
-    command: kubectl apply -f k8s.yml
+    command: |
+      set -e
+      cd manifests
+      kustomize edit set image okteto/hello-world=${OKTETO_BUILD_HELLO_WORLD_IMAGE}
+      kubectl apply -k .
 
 dev:
   hello-world:
