@@ -1,3 +1,5 @@
+icon: https://raw.githubusercontent.com/rberrelleza/python-getting-started/launch-darkly-integration/icon.png
+
 build:
   hello-world:
     context: .
