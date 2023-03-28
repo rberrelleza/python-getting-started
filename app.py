@@ -10,7 +10,7 @@ from ldclient.config import Config
 app = Flask(__name__)
 
 sdk_key = os.getenv("LAUNCHDARKLY_SDK_KEY")
-feature_flag_key = "use-new-logos"
+feature_flag_key = "use-new-emojis"
 
 @app.route('/')
 def hello_world():
