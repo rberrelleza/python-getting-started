@@ -15,6 +15,9 @@ spec:
       containers:
       - image: okteto/hello-world:python
         name: hello-world
+        envFrom:
+        - secretRef:
+            name: okteto-launchdarkly
 
 ---
 

@@ -3,7 +3,8 @@ build:
     context: .
 
 deploy:
-  - kubectl apply -f k8s.yml
+  - name: Deploy application
+    command: kubectl apply -f k8s.yml
 
 dev:
   hello-world:
@@ -16,5 +17,5 @@ dev:
 dependencies:
   launchdarkly:
     repository: https://github.com/okteto/launchdarkly
-    branch: rb/add-image
+    branch: main
     wait: true
